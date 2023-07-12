@@ -71,6 +71,16 @@
 .mobile-menu{
     display: none;
 }
+.icon{
+    
+}
+
+.alink{
+    color: black;
+    text-decoration: none;
+}
+
+
 @media screen and ( max-width: 730px) {
     .nav-bar{
         padding: 1.5rem 4rem;
@@ -101,6 +111,7 @@
     }
 }
 
+
 .container-artigos{
     display: flex;
     justify-content: center;
@@ -114,4 +125,7 @@
 }
 .artigos p{
     padding: 0.5rem;
+}
+.artigos h2{
+    margin-bottom: 10px;
 }
