@@ -1,2 +1,41 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family= Patua +One & display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;1,200&family=Newsreader:wght@200&family=Sofia&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap');
+
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+:root{
+    --cor0: #29335c;
+    --cor1: #a20021;
+    --cor2: #ffa630;
+    --cor3: #47e5bc;
+    --cor4: #008bf8;
+    --cor5: #ff7b9c;
+    --fonte-padrao: arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: "patua one", cursive;
+    --fonte-redes: 'Sofia', cursive;
+    --fonte-texto: 'Crimson Pro', serif;
+    --fonte-texto2: 'Source Serif 4', serif;
+}
+
+#containerheader{
+    background-color: black;
+    text-align: center;
+    
+}
+#containerheader img{
+    width: 200px;
+}
