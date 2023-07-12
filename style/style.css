@@ -33,10 +33,10 @@
 
 #containerheader{
     background-color: black;
-    text-align: center;
+    
     
 }
-#containerheader img{
-    width: 220px;
+#logo{
+    text-align: center;
     
 }
