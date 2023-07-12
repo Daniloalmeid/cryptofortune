@@ -18,12 +18,10 @@
     
 }
 :root{
-    --cor0: #29335c;
-    --cor1: #a20021;
-    --cor2: #ffa630;
-    --cor3: #47e5bc;
-    --cor4: #008bf8;
-    --cor5: #ff7b9c;
+    --cor0: #f9dc5c;
+    --cor1: #080f0f;
+    --cor2: #f9c22e;
+   
     --fonte-padrao: arial, verdana, helvetica, sans-serif;
     --fonte-destaque: "patua one", cursive;
     --fonte-redes: 'Sofia', cursive;
@@ -34,11 +32,13 @@
 #containerheader{
     background-color: black;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     
-    
+    border: 1px solid yellow;  
+}
+#logo{
+    margin: 0 auto;
 }
 #redessociais{
     padding: 5px;
