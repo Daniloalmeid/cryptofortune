@@ -38,7 +38,6 @@ function getCoinValues() {
                 document.getElementById("trx-value").textContent = data.litecoin.usd;
                 document.getElementById("dot-value").textContent = data.litecoin.usd;
                 document.getElementById("axax-value").textContent = data.litecoin.usd;
-                
             })
             .catch(error => console.log(error));
     }
@@ -47,9 +46,10 @@ function getCoinValues() {
     setInterval(getCoinValues, 10000); 
     // Resto do seu código para atualizar os valores das criptomoedas
 
+
 }
 
-$(document).ready(function() {
+window.addEventListener("load", function() {
     $('.carousel').slick({
         infinite: true,
         slidesToShow: 3,
@@ -59,9 +59,10 @@ $(document).ready(function() {
         speed: 1000
     });
 
-    setInterval(getCoinValues, 10000);
+    getCoinValues();
 });
 
+setInterval(getCoinValues, 10000);
 
 /*window.addEventListener("load", function() {
     $('.carousel').slick({
