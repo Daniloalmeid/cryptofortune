@@ -110,32 +110,22 @@
         display: block;
     }
 }
-#crypto-quotes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .crypto-quote {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .crypto-name {
-    font-weight: bold;
-  }
-  
-  .crypto-value {
-    font-size: 24px;
-    margin-top: 10px;
-  }
+
+/* Crytomoedas */
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.coin {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 18px;
+}
 
 
+/* Noticias */
 .container-artigos{
     display: flex;
     justify-content: center;
