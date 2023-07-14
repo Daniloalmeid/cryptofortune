@@ -54,7 +54,7 @@
 window.addEventListener("load", function() {
     $('.carousel').slick({
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 11,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
