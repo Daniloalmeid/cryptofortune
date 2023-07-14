@@ -23,21 +23,21 @@ function getCoinValues() {
         const coins = ["bitcoin", "ethereum", "litecoin", "binance coin", "xrp"];
         const url = `https://api.coingecko.com/api/v3/simple/price?ids=${coins.join(",")}&vs_currencies=usd`;
     
-        fetch(url)
+        fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,litecoin,binancecoin,xrp,cardano,solana,dogecoin,polygon,tron,polkadot,axie-infinity&vs_currencies=usd')
             .then(response => response.json())
             .then(data => {
                 document.getElementById("btc-value").textContent = data.bitcoin.usd;
                 document.getElementById("eth-value").textContent = data.ethereum.usd;
                 document.getElementById("ltc-value").textContent = data.litecoin.usd;
-                document.getElementById("bnb-value").textContent = data.litecoin.usd;
-                document.getElementById("xrp-value").textContent = data.litecoin.usd;
-                document.getElementById("ada-value").textContent = data.litecoin.usd;
-                document.getElementById("sol-value").textContent = data.litecoin.usd;
-                document.getElementById("doge-value").textContent = data.litecoin.usd;
-                document.getElementById("matic-value").textContent = data.litecoin.usd;
-                document.getElementById("trx-value").textContent = data.litecoin.usd;
-                document.getElementById("dot-value").textContent = data.litecoin.usd;
-                document.getElementById("axax-value").textContent = data.litecoin.usd;
+                document.getElementById("bnb-value").textContent = data.binancecoin.usd;
+                document.getElementById("xrp-value").textContent = data.xrp.usd;
+                document.getElementById("ada-value").textContent = data.cardano.usd;
+                document.getElementById("sol-value").textContent = data.solana.usd;
+                document.getElementById("doge-value").textContent = data.dogecoin.usd;
+                document.getElementById("matic-value").textContent = data.polygon.usd;
+                document.getElementById("trx-value").textContent = data.tron.usd;
+                document.getElementById("dot-value").textContent = data.polkadot.usd;
+                document.getElementById("axax-value").textContent = dataaxie-infinity.usd;
             })
             .catch(error => console.log(error));
     }
@@ -47,7 +47,10 @@ function getCoinValues() {
     // Resto do seu código para atualizar os valores das criptomoedas
 
 
-}
+} 
+
+
+
 
 window.addEventListener("load", function() {
     $('.carousel').slick({
