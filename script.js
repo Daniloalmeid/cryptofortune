@@ -47,12 +47,34 @@
       });
   });
 
-  
-  
 
+
+  /* */
+
+ // Seu JavaScript existente
+ function getCoinValues() {
+    // Lógica para obter os valores das moedas
+}
 
 window.addEventListener("load", function() {
     $('.carousel').slick({
+        infinite: true,
+        slidesToShow: 11,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 1000,
+        responsive: [
+          {
+            breakpoint: 730, // Ponto de corte para tela pequena
+            settings: {
+              slidesToShow: 4 // Número de slides para tela pequena
+            }
+          }
+        ]
+      });
+
+    $('.carousel-small').slick({
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -64,5 +86,29 @@ window.addEventListener("load", function() {
     getCoinValues();
 });
 
+setInterval(getCoinValues, 10000);
+
+  
+  
+
+/*
+window.addEventListener("load", function() {
+
+    
+
+    $('.carousel').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 1000
+    });
+
+
+    getCoinValues();
+});
+
 setInterval(getCoinValues, 10000); 
 
+*/
