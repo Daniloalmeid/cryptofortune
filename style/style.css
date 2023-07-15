@@ -120,19 +120,21 @@
 
 .carousel {
     width: 100%;
-    background-color: rgb(211, 218, 218);
+    background-color: rgb(209, 209, 201);
     text-align: center;
     margin: auto;
     
+    
+    
 }
-
+.imgbtc{
+    width: 10px;
+}
 .coin {
     display: inline-block;
     padding: 2px;
-    font-size: 1.2rem;
-    margin: 15px;
-    
-    
+    font-size: 1rem;
+    margin: 15px;  
 }
 
 /*  carrosel  */
@@ -145,7 +147,7 @@
   display: none;
 }
 
-  
+
   
  
 
