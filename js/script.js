@@ -1,4 +1,4 @@
-function menuShow(){
+/*function menuShow(){
     let menuMobile = document.querySelector('.mobile-menu');
     if (menuMobile.classList.contains('open')) {
         menuMobile.classList.remove('open');
@@ -9,7 +9,7 @@ function menuShow(){
     }
 }
 
-/* cotacao cripto  */
+/* cotacao cripto  */ /*
 function getCryptoQuotes() {
     fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,litecoin&vs_currencies=usd')
       .then(response => response.json())
@@ -44,7 +44,7 @@ function getCryptoQuotes() {
 
 
 
-  /* crutomoedas*/
+  /* crutomoedas*//*
 
   function getCoinValues() {
     const coins = ["bitcoin", "ethereum", "litecoin"];
