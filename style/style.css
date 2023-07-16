@@ -147,6 +147,16 @@
   display: none;
 }
 
+.price-up::after {
+    content: ' ▲';
+    color: green;
+}
+
+.price-down::after {
+    content: ' ▼';
+    color: red;
+}
+
 
   
  

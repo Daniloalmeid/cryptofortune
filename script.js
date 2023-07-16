@@ -1,6 +1,5 @@
-
-
-  $(document).ready(function() {
+    
+ $(document).ready(function() {
     fetch('https://api.coincap.io/v2/assets?limit=20')
       .then(response => response.json())
       .then(data => {
@@ -49,7 +48,7 @@
 
 
 
-  /* */
+  
 
  // Seu JavaScript existente
  function getCoinValues() {
@@ -57,12 +56,12 @@
 } 
 
 
- /* codigo que funciono */
+ /* codigo que funciono */ 
 window.addEventListener("load", function() {
   $('.carousel').slick({
       infinite: true,
       slidesToShow: 11,
-      slidesToScroll: 1,
+      slidesToScroll: 5,
       autoplay: true,
       autoplaySpeed: 2000,
       speed: 1000,
@@ -80,7 +79,7 @@ window.addEventListener("load", function() {
   $('.carousel-small').slick({
       infinite: true,
       slidesToShow: 4,
-      slidesToScroll: 1,
+      slidesToScroll: 5,
       autoplay: true,
       autoplaySpeed: 2000,
       speed: 1000,
@@ -91,10 +90,59 @@ window.addEventListener("load", function() {
 });
 
 setInterval(getCoinValues, 10000);
+/* */
 
+const previousValues = {}; // Armazenar os valores anteriores dos tokens
 
+        function getCoinValues() {
+            // Buscar os preços dos tokens na API do CoinGecko
+            const tokens = ['bitcoin', 'ethereum', 'litecoin', 'binancecoin', 'ripple', 'cardano', 'solana', 'dogecoin', 'polygon', 'tron', 'polkadot', 'avalanche'];
+            const tokenIds = tokens.join(',');
 
+            fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${tokenIds}&vs_currencies=usd`)
+                .then(response => response.json())
+                .then(data => {
+                    // Atualizar os valores dos tokens no carrossel
+                    for (const token of tokens) {
+                        const currentValue = data[token].usd;
+                        const previousValue = previousValues[token];
+                        const valueSpan = document.getElementById(`${token}-value`);
+                        const percentageSpan = document.getElementById(`${token}-percentage`);
 
+                        valueSpan.textContent = currentValue.toFixed(2);
+                        if (previousValue !== undefined) {
+                            const priceChange = currentValue - previousValue;
+                            const percentageChange = (priceChange / previousValue) * 100;
+
+                            if (priceChange > 0) {
+                                valueSpan.classList.add('price-up');
+                                valueSpan.classList.remove('price-down');
+                                percentageSpan.textContent = `(+${percentageChange.toFixed(2)}%)`;
+                            } else if (priceChange < 0) {
+                                valueSpan.classList.add('price-down');
+                                valueSpan.classList.remove('price-up');
+                                percentageSpan.textContent = `(${percentageChange.toFixed(2)}%)`;
+                            } else {
+                                valueSpan.classList.remove('price-up', 'price-down');
+                                percentageSpan.textContent = `(0.00%)`;
+                            }
+                        }
+
+                        previousValues[token] = currentValue;
+                    }
+                })
+                .catch(error => {
+                    console.log('Erro ao obter cotações de criptomoedas:', error);
+                });
+        }
+
+        window.addEventListener("load", function() {
+            // ... o seu código JavaScript existente ...
+
+            getCoinValues();
+
+            setInterval(getCoinValues, 10000); // Buscar novos valores dos tokens a cada 10 segundos
+        });
 
 
 
