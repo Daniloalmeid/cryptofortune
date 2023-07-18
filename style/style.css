@@ -163,3 +163,9 @@
 .artigos h2{
     margin-bottom: 10px;
 }
+
+.twiter{
+    background-color: red;
+    width: 400px;
+    height: 400px;
+}

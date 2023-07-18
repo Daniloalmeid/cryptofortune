@@ -81,32 +81,27 @@ window.addEventListener("load", function() {
 });
 
 setInterval(getCoinValues, 10000);
-/* */
 
-// Função para fazer uma requisição ao servidor (Python) para obter os tweets
-function getRecentTweets() {
+
+/* twiter */
+
+function getTweets() {
   fetch('/get_tweets')
       .then(response => response.json())
-      .then(data => displayTweets(data))
-      .catch(error => console.error('Erro:', error));
+      .then(tweets => {
+          const tweetsList = document.getElementById('tweets-list');
+          tweetsList.innerHTML = ''; // Limpa a lista antes de adicionar os novos tweets
+          tweets.forEach(tweet => {
+              const li = document.createElement('li');
+              li.textContent = tweet.text;
+              tweetsList.appendChild(li);
+          });
+      })
+      .catch(error => console.error('Erro ao buscar os tweets:', error));
 }
 
-// Função para exibir os tweets recebidos
-function displayTweets(tweets) {
-  const container = document.getElementById('tweets-container');
-  container.innerHTML = ''; // Limpa o conteúdo anterior
-
-  tweets.forEach(tweet => {
-      const tweetElement = document.createElement('div');
-      tweetElement.textContent = tweet.text;
-      container.appendChild(tweetElement);
-  });
-}
-
-// Carrega os tweets ao carregar a página
-window.onload = function () {
-  getRecentTweets();
-};
+// Chama a função para buscar os tweets quando a página é carregada
+document.addEventListener('DOMContentLoaded', getTweets);
 
 
 

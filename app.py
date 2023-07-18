@@ -11,7 +11,7 @@ access_token_secret = "1WpCSnKoKUMEemvSGUdM4TUE35ZNhJfYITdOmDZO2RWa1"
 def create_api():
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
-    api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
+    api = tweepy.API(auth, wait_on_rate_limit=True)
     try:
         api.verify_credentials()
         print("Autenticação bem-sucedida!")
@@ -25,7 +25,7 @@ app = Flask(__name__)
 @app.route('/get_tweets')
 def get_tweets():
     api = create_api()
-    user_tweets = api.user_timeline(screen_name="nome_do_usuario", count=5)
+    user_tweets = api.user_timeline(screen_name="@danilo_alexandr", count=5)
     tweets = [{'text': tweet.text} for tweet in user_tweets]
     return jsonify(tweets)
 
