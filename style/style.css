@@ -120,21 +120,19 @@
 
 .carousel {
     width: 100%;
-    background-color: rgb(209, 209, 201);
     text-align: center;
     margin: auto;
     
     
     
 }
-.imgbtc{
-    width: 10px;
-}
+
 .coin {
     display: inline-block;
-    padding: 2px;
+    padding: 10px;
     font-size: 1rem;
-    margin: 15px;  
+    margin: 10px; 
+    background-color: #f9c22e;
 }
 
 /*  carrosel  */
@@ -147,30 +145,6 @@
   display: none;
 }
 
-<<<<<<< HEAD
-=======
-.price-up::after {
-    content: ' ▲';
-    color: green;
-}
-
-.price-down::after {
-    content: ' ▼';
-    color: red;
-}
-
-
-  
- 
-
-
-  
-
-
-
-
-
->>>>>>> b56692158621f04121d8ad143baca390286e29c9
 /* Noticias */
 .container-artigos{
     display: flex;
