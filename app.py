@@ -2,8 +2,8 @@ import tweepy
 from flask import Flask, jsonify
 
 # Substitua essas informações com as suas chaves da API do Twitter
-consumer_key = "YZF5jcVAZgyrXPy21PGwFZgm9"
-consumer_secret = "UK0bFernDnDCdZBnEOvAAo2v8e9QsivaIUefo5amE6nBUMoPw0"
+consumer_key = "clZVWlFYNWxLb21HcThXc2pCY3Y6MTpjaQ"
+consumer_secret = " nYy6qQ0RufHBZqBwW2vc-0AyYNB0UuM0OH0baT5zdI048v78Xt"
 access_token = "66725480-OmTNNDM6m114qIAK15OHGAC7ZIT4erS28bfBJG08m"
 access_token_secret = "1WpCSnKoKUMEemvSGUdM4TUE35ZNhJfYITdOmDZO2RWa1"
 
@@ -54,4 +54,12 @@ if __name__ == '__main__':
 #API Key YZF5jcVAZgyrXPy21PGwFZgm9
 
 #API Key Secret UK0bFernDnDCdZBnEOvAAo2v8e9QsivaIUefo5amE6nBUMoPw0
+
+#Client Secret nYy6qQ0RufHBZqBwW2vc-0AyYNB0UuM0OH0baT5zdI048v78Xt
+
+#Client ID clZVWlFYNWxLb21HcThXc2pCY3Y6MTpjaQ
+
+
+
+#nYy6qQ0RufHBZqBwW2vc-0AyYNB0UuM0OH0baT5zdI048v78Xt
 
