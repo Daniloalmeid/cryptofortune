@@ -25,7 +25,7 @@ app = Flask(__name__)
 @app.route('/get_tweets')
 def get_tweets():
     api = create_api()
-    user_tweets = api.user_timeline(screen_name="@danilo_alexandr", count=5)
+    user_tweets = api.user_timeline(screen_name="danilo_alexandr", count=5)
     tweets = [{'text': tweet.text} for tweet in user_tweets]
     return jsonify(tweets)
 
