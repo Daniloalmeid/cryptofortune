@@ -84,32 +84,70 @@ setInterval(getCoinValues, 10000);
 
 
 /* twiter */
+/*
+consumer_key = "clZVWlFYNWxLb21HcThXc2pCY3Y6MTpjaQ"
+#consumer_secret = "nYy6qQ0RufHBZqBwW2vc-0AyYNB0UuM0OH0baT5zdI048v78Xt"
+#access_token = "66725480-OmTNNDM6m114qIAK15OHGAC7ZIT4erS28bfBJG08m"
+#access_token_secret = "1WpCSnKoKUMEemvSGUdM4TUE35ZNhJfYITdOmDZO2RWa1"
+*/
 
-function getTweets() {
-  fetch('/get_tweets')
-      .then(response => response.json())
-      .then(tweets => {
-          const tweetsList = document.getElementById('tweets-list');
-          tweetsList.innerHTML = ''; // Limpa a lista antes de adicionar os novos tweets
-          tweets.forEach(tweet => {
-              const li = document.createElement('li');
-              li.textContent = tweet.text;
-              tweetsList.appendChild(li);
-          });
-      })
-      .catch(error => console.error('Erro ao buscar os tweets:', error));
-}
+  // Credenciais da API do Twitter (substitua pelos seus próprios valores)
+  const consumerKey = 'clZVWlFYNWxLb21HcThXc2pCY3Y6MTpjaQ';
+  const consumerSecret = 'nYy6qQ0RufHBZqBwW2vc-0AyYNB0UuM0OH0baT5zdI048v78Xt';
+  const accessToken = '66725480-OmTNNDM6m114qIAK15OHGAC7ZIT4erS28bfBJG08m';
+  const accessTokenSecret = '1WpCSnKoKUMEemvSGUdM4TUE35ZNhJfYITdOmDZO2RWa1';
 
-// Chama a função para buscar os tweets quando a página é carregada
-document.addEventListener('DOMContentLoaded', getTweets);
 
-twttr.widgets.createTimeline(
-  {
-    sourceType: "profile",
-    screenName: "danilo_alexandr"
-  },
-  document.getElementById("twiter2")
-);
+  // Lista de tweetIds que você deseja incorporar (substitua pelos seus próprios valores)
+  const tweetIds = [
+    '1682006377655422976', // Tweet ID 1
+    '1681770379314884610', // Tweet ID 2
+    '5678901234567890123'  // Tweet ID 3
+    // Adicione mais tweetIds, se necessário
+  ];
+
+
+  // URL da API do Twitter
+  const apiUrlBase = 'https://api.twitter.com/2/tweets/';
+
+  // Método para fazer a solicitação à API do Twitter usando jQuery
+  function loadTweets() {
+    const tweetsContainer = document.getElementById('tweetsContainer');
+
+    tweetIds.forEach(tweetId => {
+      const apiUrl = `${apiUrlBase}${tweetId}`;
+      $.ajax({
+        url: apiUrl,
+        type: 'GET',
+        headers: {
+          'Authorization': `OAuth oauth_consumer_key="${consumerKey}", oauth_token="${accessToken}", oauth_signature_method="HMAC-SHA1"`
+        },
+        success: function (data) {
+          // Extrair informações relevantes do tweet
+          const tweetText = data.data.text;
+          const authorName = data.includes.users[0].name;
+          const authorUsername = data.includes.users[0].username;
+          const authorProfileImage = data.includes.users[0].profile_image_url;
+
+          // Formatar o tweet e exibi-lo no contêiner
+          const tweetHTML = `
+            <div class="tweet-container">
+              <img src="${authorProfileImage}" alt="${authorName}" width="50" height="50">
+              <strong>${authorName}</strong> (@${authorUsername})<br>
+              <p>${tweetText}</p>
+            </div>
+          `;
+          tweetsContainer.innerHTML += tweetHTML;
+        },
+        error: function (error) {
+          console.error('Erro ao carregar o tweet:', error);
+        }
+      });
+    });
+  }
+
+  // Carregar os tweets quando a página for carregada
+  $(document).ready(loadTweets);
 
 
 

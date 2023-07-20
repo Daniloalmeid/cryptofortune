@@ -164,10 +164,11 @@
     margin-bottom: 10px;
 }
 
-.twiter{
-    background-color: red;
-    width: 400px;
-    height: 400px;
-}
+.tweet-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 500px;
+    margin-bottom: 10px;
+  }
 
 
