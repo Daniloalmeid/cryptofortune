@@ -95,7 +95,19 @@ window.addEventListener('scroll', function () {
   }
 });
 
-/* twiter ultima postagem */
+function shuffleTwitterLinks() {
+  const container = document.getElementById('twitterContainer');
+  const links = container.querySelectorAll('a.twitter-timeline');
+  const len = links.length;
+
+  for (let i = 0; i < len; i++) {
+    const randomIndex = Math.floor(Math.random() * len);
+    container.appendChild(links[randomIndex]);
+  }
+}
+
+// Chamando a função para embaralhar as tags <a> a cada 5 segundos
+setInterval(shuffleTwitterLinks, 5000);
 
 
 
