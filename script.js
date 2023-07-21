@@ -95,7 +95,7 @@ window.addEventListener('scroll', function () {
   }
 });
 
-/* twiter carrocel */
+/*twiter carrocel
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -123,4 +123,37 @@ function shuffleTwitterLinks() {
 
 // Chamar a função inicialmente e a cada 5 segundos
 shuffleTwitterLinks();
-setInterval(shuffleTwitterLinks, 5000);
+setInterval(shuffleTwitterLinks, 5000); 
+*/
+ // Substitua 'sua-chave-api-aqui' pela sua chave de API da CoinMarketCap
+ const apiKey = '79c970ec-adec-47d0-8539-0b2a03a1b660';
+ const apiUrl = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
+
+ // Função para obter os dados da API e exibir na página
+ function getTopCryptos() {
+     $.ajax({
+         url:'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest',
+         headers: {
+             'X-CMC_PRO_API_KEY': '79c970ec-adec-47d0-8539-0b2a03a1b660',
+         },
+         method: 'GET',
+         dataType: 'json',
+         success: function (data) {
+             const topCryptos = data.data.slice(0, 10); // Obtem os 10 primeiros ativos
+             const cryptoList = $('#cryptoList');
+             cryptoList.empty();
+             topCryptos.forEach(crypto => {
+                 cryptoList.append(`<li>${crypto.name} - ${crypto.symbol} - USD ${crypto.quote.USD.price}</li>`);
+             });
+         },
+         error: function (error) {
+             console.error('Erro ao obter dados da API:', error);
+         }
+     });
+ }
+
+ // Chama a função para obter os dados quando a página carregar
+ $(document).ready(function () {
+     getTopCryptos();
+ });
+
