@@ -98,27 +98,29 @@ window.addEventListener('scroll', function () {
 /* twiter carrocel */
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
   }
 }
 
 function shuffleTwitterLinks() {
   const container = document.getElementById('twitterContainer');
-  const links = container.querySelectorAll('a.twitter-timeline');
-  const linksArray = Array.from(links);
+  const divs = container.querySelectorAll('div');
+  const divsArray = Array.from(divs);
 
-  shuffleArray(linksArray);
+  shuffleArray(divsArray);
 
-  container.innerHTML = '';
-  linksArray.forEach(link => {
-    container.appendChild(link);
+  // Remover todos os elementos atuais do container
+  while (container.firstChild) {
+      container.removeChild(container.firstChild);
+  }
+
+  // Adicionar os elementos embaralhados de volta ao container
+  divsArray.forEach(div => {
+      container.appendChild(div);
   });
 }
 
-// Chamando a função para embaralhar as tags <a> a cada 5 segundos
+// Chamar a função inicialmente e a cada 5 segundos
+shuffleTwitterLinks();
 setInterval(shuffleTwitterLinks, 5000);
-
-
-
-
