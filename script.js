@@ -83,71 +83,14 @@ window.addEventListener("load", function() {
 setInterval(getCoinValues, 10000);
 
 
-/* twiter */
-/*
-consumer_key = "clZVWlFYNWxLb21HcThXc2pCY3Y6MTpjaQ"
-#consumer_secret = "nYy6qQ0RufHBZqBwW2vc-0AyYNB0UuM0OH0baT5zdI048v78Xt"
-#access_token = "66725480-OmTNNDM6m114qIAK15OHGAC7ZIT4erS28bfBJG08m"
-#access_token_secret = "1WpCSnKoKUMEemvSGUdM4TUE35ZNhJfYITdOmDZO2RWa1"
-*/
+window.addEventListener('scroll', function () {
+  const featuredColumn = document.querySelector('.featured');
+  const rect = featuredColumn.getBoundingClientRect();
+  const offset = window.innerHeight / 2; // Pode ajustar o valor do offset conforme necessário
 
-  // Credenciais da API do Twitter (substitua pelos seus próprios valores)
-  const consumerKey = 'clZVWlFYNWxLb21HcThXc2pCY3Y6MTpjaQ';
-  const consumerSecret = 'nYy6qQ0RufHBZqBwW2vc-0AyYNB0UuM0OH0baT5zdI048v78Xt';
-  const accessToken = '66725480-OmTNNDM6m114qIAK15OHGAC7ZIT4erS28bfBJG08m';
-  const accessTokenSecret = '1WpCSnKoKUMEemvSGUdM4TUE35ZNhJfYITdOmDZO2RWa1';
-
-
-  // Lista de tweetIds que você deseja incorporar (substitua pelos seus próprios valores)
-  const tweetIds = [
-    '1682006377655422976', // Tweet ID 1
-    '1681770379314884610', // Tweet ID 2
-    '5678901234567890123'  // Tweet ID 3
-    // Adicione mais tweetIds, se necessário
-  ];
-
-
-  // URL da API do Twitter
-  const apiUrlBase = 'https://api.twitter.com/2/tweets/';
-
-  // Método para fazer a solicitação à API do Twitter usando jQuery
-  function loadTweets() {
-    const tweetsContainer = document.getElementById('tweetsContainer');
-
-    tweetIds.forEach(tweetId => {
-      const apiUrl = `${apiUrlBase}${tweetId}`;
-      $.ajax({
-        url: apiUrl,
-        type: 'GET',
-        headers: {
-          'Authorization': `OAuth oauth_consumer_key="${consumerKey}", oauth_token="${accessToken}", oauth_signature_method="HMAC-SHA1"`
-        },
-        success: function (data) {
-          // Extrair informações relevantes do tweet
-          const tweetText = data.data.text;
-          const authorName = data.includes.users[0].name;
-          const authorUsername = data.includes.users[0].username;
-          const authorProfileImage = data.includes.users[0].profile_image_url;
-
-          // Formatar o tweet e exibi-lo no contêiner
-          const tweetHTML = `
-            <div class="tweet-container">
-              <img src="${authorProfileImage}" alt="${authorName}" width="50" height="50">
-              <strong>${authorName}</strong> (@${authorUsername})<br>
-              <p>${tweetText}</p>
-            </div>
-          `;
-          tweetsContainer.innerHTML += tweetHTML;
-        },
-        error: function (error) {
-          console.error('Erro ao carregar o tweet:', error);
-        }
-      });
-    });
+  if (rect.top < offset && rect.bottom >= offset) {
+    featuredColumn.style.transform = `scale(1.1)`; // Ajuste o efeito de destaque aqui
+  } else {
+    featuredColumn.style.transform = `scale(1)`; // Remova o destaque se a coluna não estiver no centro
   }
-
-  // Carregar os tweets quando a página for carregada
-  $(document).ready(loadTweets);
-
-
-
+});

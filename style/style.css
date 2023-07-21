@@ -146,29 +146,41 @@
 }
 
 /* Noticias */
-.container-artigos{
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1rem;
-    
-}
-.artigos{
-    width: 400px;
-}
-.artigos p{
-    padding: 0.5rem;
-}
-.artigos h2{
-    margin-bottom: 10px;
-}
-
-.tweet-container {
-    border: 1px solid #ccc;
-    padding: 10px;
-    max-width: 500px;
-    margin-bottom: 10px;
+    justify-content: space-between;
+    margin: 10px;
   }
+  
+  .column {
+    width: 30%; /* Ajuste a largura das colunas conforme necessário */
+
+  }
+
+  .featured{
+    margin-left: 10px;
+  }
+
+ 
+  
+  /* Estilos para a tela média */
+  @media screen and (max-width: 810px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .column {
+      width: 100%;
+      margin-bottom: 10px; /* Espaçamento entre as colunas */
+      transition: transform 0.3s;
+      
+    }
+  
+    .featured {
+      order: -1; /* Coloca a coluna em destaque antes das demais na ordem */
+      background-color: #f7f7f7; /* Adicione a cor de destaque aqui */
+    }
+  }
+
 
 
