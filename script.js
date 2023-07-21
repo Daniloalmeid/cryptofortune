@@ -94,3 +94,9 @@ window.addEventListener('scroll', function () {
     featuredColumn.style.transform = `scale(1)`; // Remova o destaque se a coluna não estiver no centro
   }
 });
+
+/* twiter ultima postagem */
+
+
+
+
