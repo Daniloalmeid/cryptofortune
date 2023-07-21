@@ -158,8 +158,12 @@
   }
 
   .featured{
-    margin-left: 10px;
+
   }
+
+ 
+
+  
 
  
   
@@ -180,6 +184,9 @@
       order: -1; /* Coloca a coluna em destaque antes das demais na ordem */
       background-color: #f7f7f7; /* Adicione a cor de destaque aqui */
     }
+
+    
+    
   }
 
 
