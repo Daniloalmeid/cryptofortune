@@ -176,13 +176,17 @@
 .column-left {
     flex: 2;
     border: solid 1px ;
+    margin: 10px;
+    
 }
 .column-center {
     flex: 5;
 }
 .column-right {
     flex: 2;
+    margin: 10px;
 }
+    
 h1 {
     font-size: 24px;
     font-weight: bold;
@@ -230,6 +234,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 10px;
 }
 
 .news-item {
