@@ -30,11 +30,6 @@
     --fonte-texto2: 'Source Serif 4', serif;
 }
 
-body{
-    width: 85%;
-    margin: 0 auto;
-}
-
 #containerheader{
     background-color: black;
     display: flex;
@@ -147,10 +142,14 @@ body{
 
 /* Noticias */
 
+
 .container {
     display: flex;
     justify-content: space-between;
     margin: 5px;
+    width: 85%;
+    margin: 0 auto;
+
 }
 .imgnoticias{
     transition: opacity 0.2s ease;
@@ -228,6 +227,7 @@ p {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        
     }
     .column {
         flex: 1;
