@@ -153,6 +153,7 @@
 }
 .column-left {
     flex: 2;
+    border: solid 1px ;
 }
 .column-center {
     flex: 5;
@@ -205,6 +206,17 @@ p {
     max-width: calc(70% - 10px);
 
 }
+
+.imgnoticias{
+    padding: 10px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+     
+   }
+
+
+   
 
 
 /*.container {
