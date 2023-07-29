@@ -194,6 +194,18 @@ p {
     max-width: calc(50% - 10px); /* Para que as notícias ocupem metade da largura da coluna esquerda */
 }
 
+.container-noticias{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item-noticias{
+    flex: 1;
+    max-width: calc(70% - 10px);
+
+}
+
 
 /*.container {
     display: flex;
