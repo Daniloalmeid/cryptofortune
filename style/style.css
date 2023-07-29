@@ -159,6 +159,13 @@
 .news-item p:hover {
     color: #080f0f79;
 }
+
+.item-noticias h1:hover,
+.item-noticias h1:hover{
+    color: #080f0f79;
+
+}
+
 .column {
     flex: 1;
     padding: 10px;
