@@ -120,6 +120,7 @@
     width: 100%;
     text-align: center;
     margin: auto;
+    border
     
     
     
@@ -136,7 +137,7 @@
 /*  carrosel  */
 
 
-  
+
   
 .carousel .slick-prev,
 .carousel .slick-next {
