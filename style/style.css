@@ -119,11 +119,7 @@
 .carousel {
     width: 100%;
     text-align: center;
-    margin: auto;
-    border
-    
-    
-    
+    margin: auto;  
 }
 
 .coin {
@@ -145,6 +141,8 @@
 }
 
 /* Noticias */
+
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -154,6 +152,16 @@
   .column {
     width: 30%; /* Ajuste a largura das colunas conforme necessário */
 
+  }
+
+  .imgantigas{
+   
+  }
+
+  .noticiasantigas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .imgnoticias{
