@@ -190,6 +190,8 @@
 .column-right {
     flex: 2;
     margin: 5px;
+    background-color: rgba(153, 205, 50, 0.788);
+    
 }
     
 h1 {
