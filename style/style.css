@@ -30,6 +30,11 @@
     --fonte-texto2: 'Source Serif 4', serif;
 }
 
+body{
+    width: 85%;
+    margin: 0 auto;
+}
+
 #containerheader{
     background-color: black;
     display: flex;
@@ -177,7 +182,7 @@
     flex: 2;
     border: solid 1px ;
     margin: 5px;
-    background-color: yellowgreen;
+    background-color: rgba(153, 205, 50, 0.788);
     
 }
 .column-center {
