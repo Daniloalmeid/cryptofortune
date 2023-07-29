@@ -200,6 +200,11 @@ p {
    align-items: center;
 }
 
+.h1noticiasantigas{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .container-noticias{
     display: flex;
     flex-wrap: wrap;
