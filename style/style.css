@@ -204,7 +204,7 @@ p {
 }
 
 /* Estilos para telas menores ou iguais a 768 pixels */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .container {
         flex-direction: column; /* Altera a direção para empilhar as colunas verticalmente */
     }
