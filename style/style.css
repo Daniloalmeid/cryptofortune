@@ -193,6 +193,11 @@ p {
 .news-item {
     flex: 1;
     max-width: calc(50% - 10px); /* Para que as notícias ocupem metade da largura da coluna esquerda */
+    
+}
+
+.news-item img{
+   align-items: center;
 }
 
 .container-noticias{
