@@ -186,6 +186,7 @@
 }
 .column-center {
     flex: 5;
+   
 }
 .column-right {
     flex: 2;
@@ -289,6 +290,26 @@ p {
     margin: 0 auto;
      
    }
+
+  .imagem-container {
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 200px; /* Largura do contêiner */
+    height: 200px; /* Altura do contêiner */
+}
+
+.imgpost {
+    width: 100%; /* Preencher o contêiner */
+    height: 100%; /* Preencher o contêiner */
+    object-fit: cover; /* Manter a relação de aspecto e preencher o contêiner */
+}
+
+.imagem-container:hover .imgpost {
+    transform: scale(1.2); /* Aumentar a escala da imagem em 20% */
+}
+
+
 
    .leiamais{
     display: block;
