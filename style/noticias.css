@@ -272,6 +272,11 @@ p {
 
 }
 
+.item-noticias p{
+    text-justify: auto;
+    font-size: 1.1rem;
+}
+
 .linknoticias{
     text-decoration: none;
     color: #080f0f;
