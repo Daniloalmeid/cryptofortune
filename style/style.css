@@ -181,13 +181,7 @@ body{
     flex: 1;
     padding: 10px;
 }
-.column-left {
-    flex: 2;
-    border: solid 1px ;
-    margin: 5px;
-    background-color: rgba(153, 205, 50, 0.788);
-    
-}
+
 .column-center {
     flex: 5;
 }
@@ -210,7 +204,7 @@ p {
 }
 
 /* Estilos para telas menores ou iguais a 768 pixels */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .container {
         flex-direction: column; /* Altera a direção para empilhar as colunas verticalmente */
     }
