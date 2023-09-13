@@ -30,6 +30,10 @@
     --fonte-texto2: 'Source Serif 4', serif;
 }
 
+body{
+    background-color: rgba(128, 128, 128, 0.325);
+}
+
 #containerheader{
     background-color: black;
     display: flex;
@@ -268,7 +272,17 @@ p {
 
 .item-noticias{
     flex: 1;
-    max-width: calc(70% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.608);
+    border-radius: 10px;
+    
+    /* max-width: calc(70% - 10px); */
+
 
 }
 
@@ -285,6 +299,7 @@ p {
      
 }
 
+
   
 
    .leiamais{
@@ -295,6 +310,10 @@ p {
     color: blue; /* Ou a cor desejada para o link */
     font-weight: bold;
    }
+
+
+
+
 
 
    
