@@ -31,8 +31,35 @@
 }
 
 body{
-    background-color: rgba(128, 128, 128, 0.325);
+    
+    background: black url('../imagens/moedas/Bitcoin-bac-esqb.jpg') center center no-repeat fixed;
+    background-size: cover;  
+    
 }
+
+@media (max-width: 768px) {
+
+    #body{
+
+        background-repeat: no-repeat;
+      
+        
+        background: black url('../imagens/moedas/Bitcoin-bacp.jpg') 
+        
+
+
+    }  
+
+    
+
+
+}
+
+
+    
+
+
+
 
 #containerheader{
     background-color: black;
@@ -40,6 +67,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px; 
+    
 }
 #logo{
     margin: 0 auto;
@@ -113,10 +141,7 @@ body{
     }
 }
 
-@media screen and ( max-width: 730px) {
-    
-    
-}
+
 
 /* Crytomoedas */
 
