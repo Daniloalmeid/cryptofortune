@@ -67,6 +67,14 @@ body{
 }
 .nav-item{
     margin: 0 15px;
+    padding: 3px;
+}
+.nav-item:hover{
+    background-color: #e4c84a;
+    border-radius: 10px;
+    padding: 3px;
+    transition: 0.3s;
+    
 }
 
 .mobile-menu-icon{
@@ -80,6 +88,10 @@ body{
 .alink{
     color: black;
     text-decoration: none;
+}
+.alink:hover{
+    color: white;
+    transition: 0.3s;
 }
 
 
