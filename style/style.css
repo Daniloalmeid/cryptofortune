@@ -100,18 +100,37 @@ body{
     display: none;
     padding: 10px;
 }
-.submenu{
-    margin-top: 40px;
+/* .submenu{
+    display: flex;
+    flex-wrap: wrap;
     
-}
+} */
 .menu li.nav-item:hover .submenu li{
    display: block;  
+   
   
 }
 .menu li.nav-item:hover .imgcripto{
     display: block; 
     
+    
    
+ }
+ .colunas{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   
+    
+ }
+ .divisaocolunas{
+    column-count: 3;
+    column-gap: 30px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 100%;
  }
 
 
