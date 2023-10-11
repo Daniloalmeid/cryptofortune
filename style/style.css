@@ -93,18 +93,26 @@ body{
     color: white;
     transition: 0.3s;
 }
-.submenu{
-   
-    
+.imgcripto{
+    display: none;
 }
 .submenu li{
     display: none;
     padding: 10px;
 }
+.submenu{
+    margin-top: 40px;
+    
+}
 .menu li.nav-item:hover .submenu li{
-   display: block; 
+   display: block;  
   
 }
+.menu li.nav-item:hover .imgcripto{
+    display: block; 
+    
+   
+ }
 
 
 @media screen and ( max-width: 730px) {
