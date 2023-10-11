@@ -144,6 +144,9 @@ body{
     
    
  }
+ .imgcotacao{
+    width: 20px;
+ }
 
 
 @media screen and ( max-width: 730px) {
