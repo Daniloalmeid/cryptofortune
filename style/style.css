@@ -108,10 +108,13 @@ body{
 .menu li.nav-item:hover .submenu li{
    display: block;  
    
+   
+   
   
 }
 .menu li.nav-item:hover .imgcripto{
-    display: block; 
+    display: block;
+    margin-top: 30px; 
     
     
    
@@ -126,14 +129,17 @@ body{
    
     
  }
+ .colunas a{
+    text-decoration: none;
+    font-size: 1.3rem;
+ }
  .divisaocolunas{
     column-count: 3;
     column-gap: 30px;
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
     text-align: center;
     width: 100%;
-    margin-top: 50px;
+   
  }
 
 
@@ -161,7 +167,9 @@ body{
     .mobile-menu .nav-item{
         display: block;
         padding-top: 1.2rem;
+
     }
+    
     .open{
         display: block;
     }
@@ -171,6 +179,21 @@ body{
     
     
 }
+
+.ul-menu li.nav-item:hover .submenu li{
+    display: block;  
+    
+    
+    
+   
+ }
+ .ul-menu li.nav-item:hover .imgcripto{
+     display: block;
+     margin-top: 30px; 
+     
+     
+    
+  }
 
 /* Crytomoedas */
 
