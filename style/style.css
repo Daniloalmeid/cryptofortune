@@ -93,6 +93,18 @@ body{
     color: white;
     transition: 0.3s;
 }
+.submenu{
+   
+    
+}
+.submenu li{
+    display: none;
+    padding: 10px;
+}
+.menu li.nav-item:hover .submenu li{
+   display: block; 
+  
+}
 
 
 @media screen and ( max-width: 730px) {
