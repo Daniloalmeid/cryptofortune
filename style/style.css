@@ -95,6 +95,7 @@ body{
 }
 .imgcripto{
     display: none;
+    border-radius: 50px;
 }
 .submenu li{
     display: none;
