@@ -51,10 +51,10 @@
 window.addEventListener("load", function() {
   $('.carousel').slick({
       infinite: true,
-      slidesToShow: 8,
+      slidesToShow: 6,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 1000,
       speed: 1000,
       arrows: false, // Remover os botões "Previous" e "Next"
       responsive: [
