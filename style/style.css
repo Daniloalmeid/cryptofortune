@@ -233,36 +233,33 @@ body{
 }
 
 .coin {
-    width: 180px;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 10px;
     border-radius: 10px;
 }
 
 .imgcotacao{
     width: 22px;
     border-radius: 50px;
-    margin-right: 7px;
+    margin-right: 10px;
  
  }
  .pcotacao{
-    padding: 10px;
+    padding: 5px;
  }
 
  .acotacao{
-    width: 200px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 10px;
-    margin-right: 15px;
+    padding: 5px;
     border-radius: 10px;
     text-decoration: none;
-   
  }
 
 /*  carrosel  */
