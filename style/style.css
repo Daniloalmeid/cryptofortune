@@ -229,7 +229,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: var(--cor2);  
+  background-color: black; 
 }
 
 .coin {
@@ -245,6 +245,7 @@ body{
     width: 22px;
     border-radius: 50px;
     margin-right: 10px;
+    border: 1px solid white;
  
  }
  .pcotacao{
@@ -260,6 +261,7 @@ body{
     padding: 5px;
     border-radius: 10px;
     text-decoration: none;
+    color: white;
  }
 
 /*  carrosel  */
