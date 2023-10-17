@@ -144,9 +144,28 @@ body{
     
    
  }
+
+ @media screen and ( max-width: 730px) {
+    .divisaocolunas{
+        column-count: 3;
+        column-gap: 20px;
+        text-align: center;
+     }
+  
+ }
+
+ @media screen and ( max-width: 900px) {
+    .divisaocolunas{
+        column-count: 3;
+        column-gap: 20px;
+        text-align: center;
+     }
+  
+ }
  .imgcotacao{
     width: 20px;
  }
+
 
 
 @media screen and ( max-width: 730px) {
