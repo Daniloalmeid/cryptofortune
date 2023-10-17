@@ -67,6 +67,8 @@ window.addEventListener("load", function() {
       ]
     });
 
+    
+
   $('.carousel-small').slick({
       infinite: true,
       slidesToShow: 2,
