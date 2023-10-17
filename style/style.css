@@ -101,24 +101,25 @@ body{
     display: none;
     padding: 10px;
 }
+#sumir li{
+    display: block;
+}
 /* .submenu{
     display: flex;
     flex-wrap: wrap;
     
 } */
-.menu li.nav-item:hover .submenu li{
-   display: block;  
-   
-   
-   
-  
+.menu li.nav-item:hover .submenu li {
+   display: block; 
+    
 }
 .menu li.nav-item:hover .imgcripto{
     display: block;
     margin-top: 30px; 
-    
-    
-   
+ }
+ .menu:hover #sumir {
+   display: none;
+     
  }
  .colunas{
    display: flex;
@@ -164,6 +165,7 @@ body{
  }
  .imgcotacao{
     width: 20px;
+    border-radius: 50px;
  }
 
 
@@ -223,18 +225,45 @@ body{
 /* Crytomoedas */
 
 .carousel {
-    width: 100%;
-    text-align: center;
-    margin: auto;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--cor2);  
 }
 
 .coin {
-    display: inline-block;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     padding: 10px;
-    font-size: 1rem;
-    margin: 10px; 
-    background-color: #f9c22e;
+    border-radius: 10px;
 }
+
+.imgcotacao{
+    width: 22px;
+    border-radius: 50px;
+    margin-right: 7px;
+ 
+ }
+ .pcotacao{
+    padding: 10px;
+ }
+
+ .acotacao{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-right: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+   
+ }
 
 /*  carrosel  */
 
