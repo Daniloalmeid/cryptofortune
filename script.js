@@ -51,7 +51,7 @@
 window.addEventListener("load", function() {
   $('.carousel').slick({
       infinite: true,
-      slidesToShow: 11,
+      slidesToShow: 8,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000,
@@ -61,7 +61,7 @@ window.addEventListener("load", function() {
         {
           breakpoint: 730, // Ponto de corte para tela pequena
           settings: {
-            slidesToShow: 4 // Número de slides para tela pequena
+            slidesToShow: 3 // Número de slides para tela pequena
           }
         }
       ]
