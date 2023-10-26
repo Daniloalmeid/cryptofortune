@@ -359,10 +359,44 @@ body{
   
  }
 
+ .imgbtc{
+    margin: 10px;
+ }
+ .btccabeca{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+ }
+ .imgdoe{
+    width: 60px;
+    padding: 10px;
+ }
+ .doe{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 1200px;
+    top: 267px;
+    padding: 10px;
+ }
+
+ .doe h3{
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 3px 3px 10px black;
+    
+ }
  @media screen and ( max-width: 730px) {
-   
+    .doe{
+      
+        left: px;
+        top: px;
+        padding: 10px;
+     }
   
  }
+
 
  
 
