@@ -377,7 +377,16 @@
     <main>
 <!-- TradingView Widget BEGIN -->
 <div class="container-btc">
-    <img class="imgbtc" src="../imagens/cripto/logobtc.png" alt="bitcoin">
+    <picture id="banner">
+        <source media="(max-width: 750px )" srcset="../imagens/cripto/logobtcpq.png">
+
+        <source media="(max-width: 830px )" srcset="imagen/pico/pico-do-jaraguam2.jpg">
+
+        <source media="(max-width: 1200px )" srcset="imagen/pico/pico-do-jaraguam.jpg">
+
+        <img src="../imagens/cripto/logobtc.png" class="imgbanner" alt="">
+    </picture>
+    <!-- <img class="imgbtc" src="../imagens/cripto/logobtc.png" alt="bitcoin"> -->
     <section class="grafico-grande">
         <div class="tradingview-widget-container">
             <div id="tradingview_4ddac"></div>
