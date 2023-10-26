@@ -31,35 +31,8 @@
 }
 
 body{
-    
-    background: black url('../imagens/moedas/Bitcoin-bac-esqb.jpg') center center no-repeat fixed;
-    background-size: cover;  
-    
+    background-color: rgba(128, 128, 128, 0.325);
 }
-
-@media (max-width: 768px) {
-
-    #body{
-
-        background-repeat: no-repeat;
-      
-        
-        background: black url('../imagens/moedas/Bitcoin-bacp.jpg') 
-        
-
-
-    }  
-
-    
-
-
-}
-
-
-    
-
-
-
 
 #containerheader{
     background-color: black;
@@ -67,7 +40,6 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px; 
-    
 }
 #logo{
     margin: 0 auto;
@@ -81,6 +53,7 @@ body{
     justify-content: space-between;
     padding: 1.5rem 4rem;
     background-color: var(--cor0);
+    
 }
 .nav-list{
     display: flex;
@@ -92,9 +65,20 @@ body{
     justify-content: center;
     list-style: none;
     
+    
 }
 .nav-item{
     margin: 0 15px;
+    padding: 3px;
+    
+}
+.nav-item:hover{
+    background-color: #e4c84a;
+    border-radius: 10px;
+    padding: 3px;
+    transition: 0.3s;
+   
+    
 }
 
 .mobile-menu-icon{
@@ -109,55 +93,216 @@ body{
     color: black;
     text-decoration: none;
 }
+.alink:hover{
+    color: white;
+    transition: 0.3s;
+}
+.imgcripto{
+    display: none;
+    border-radius: 50px;
+}
+.submenu li{
+    display: none;
+    padding: 10px;
+    
+    
+
+}
+
+/* .submenu{
+    display: flex;
+    flex-wrap: wrap;
+    
+} */
+
+.menu li.nav-item:hover .submenu li {
+   display: block; 
+  
+   
+    
+}
+.menu li.nav-item:hover .imgcripto{
+    display: block;
+    margin-top: 30px; 
+    
+    
+ }
+
+ /* .menu:hover .submenu2 li {
+    display: none; 
+     
+ } */
+
+
+ 
+
+
+ /* .menu li:hover #sumir {
+   display: none;
+     
+ } */
+ .colunas{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   flex-direction: column;
+   column-count: 2;
+   text-shadow: 2px 2px 5px black;
+   
+   
+    
+ }
+ .colunas a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+ }
+ .divisaocolunas{
+    column-count: 6;
+    column-gap: 30px;
+    text-align: center;
+    width: 100%;
+    background-color: #080f0f;
+    border-radius: 30px;
+    
+   
+ }
+
+ @media screen and ( max-width: 730px) {
+    .divisaocolunas{
+        column-count: 3;
+        column-gap: 20px;
+        text-align: center;
+     }
+  
+ }
+
+ @media screen and ( max-width: 900px) {
+    .divisaocolunas{
+        column-count: 3;
+        column-gap: 20px;
+        text-align: center;
+     }
+  
+ }
+ .imgcotacao{
+    width: 20px;
+    border-radius: 50px;
+ }
+ 
+
+
+
 
 
 @media screen and ( max-width: 730px) {
     .nav-bar{
         padding: 1.5rem 4rem;
+        
     }
     .nav-item{
         display: none;
     }
     .mobile-menu-icon{
         display: block;
+        
+        
+        
     }
     .mobile-menu-icon button {
         background-color: transparent;
         border: none;
         cursor: pointer;
+        
     }
     .mobile-menu ul{
         display: flex;
         flex-direction: column;
         text-align: center;
         padding-bottom: 1rem;
+       background-color: black;
+       margin-bottom: 5px;
+       
+       
     }
     .mobile-menu .nav-item{
         display: block;
         padding-top: 1.2rem;
+        
+        
+    }
+    .alink{
+        color: white;
     }
     .open{
         display: block;
+        
     }
+ 
 }
 
 
+
+@media screen and ( max-width: 730px) {
+    
+    
+}
+
+.ul-menu li.nav-item:hover .submenu li{
+    display: block;  
+
+    
+ }
+ .ul-menu li.nav-item:hover .imgcripto{
+     display: block;
+     margin-top: 30px; 
+     
+     
+    
+  }
 
 /* Crytomoedas */
 
 .carousel {
-    width: 100%;
-    text-align: center;
-    margin: auto;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: black; 
 }
 
 .coin {
-    display: inline-block;
-    padding: 10px;
-    font-size: 1rem;
-    margin: 10px; 
-    background-color: #f9c22e;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
 }
+
+.imgcotacao{
+    width: 22px;
+    border-radius: 50px;
+    margin-right: 10px;
+    border: 1px solid white;
+ 
+ }
+ .pcotacao{
+    padding: 2px;
+ }
+
+ .acotacao{
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+ }
 
 /*  carrosel  */
 
@@ -172,6 +317,251 @@ body{
 /* Noticias */
 
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+   
+    margin: 0 auto;
+
+}
+.imgnoticias{
+    transition: opacity 0.2s ease;
+}
+.imgnoticias:hover{
+    opacity: 0.7;
+    color: #080f0f00;
+    cursor: pointer;
+}
+
+.news-item h3:hover,
+.news-item p:hover {
+    color: #080f0f79;
+    cursor: pointer;
+}
+
+.item-noticias h1:hover,
+.item-noticias p:hover{
+    color: #080f0f79;
+    cursor: pointer;
+
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.column-center {
+    flex: 5;
+}
+.column-right {
+    flex: 2;
+    margin: 5px;
+    background-color: rgba(153, 205, 50, 0.788);
+    
+}
+    
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+h3 {
+    font-size: 18px;
+}
+p {
+    font-size: 14px;
+}
+
+/* Estilos para telas menores ou iguais a 768 pixels */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Altera a direção para empilhar as colunas verticalmente */
+    }
+
+    /* Define a ordem das colunas em dispositivos de tela pequena */
+    .column-center {
+        order: 1; /* Central aparece primeiro */
+    }
+
+    .column-left {
+        order: 2; /* Esquerda aparece em segundo */
+    }
+
+    .column-right {
+        order: 3; /* Direita aparece em terceiro */
+    }
+}
+
+/* Estilos para telas menores ou iguais a 768 pixels */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        
+        
+    }
+    .column {
+        flex: 1;
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para duas notícias lado a lado na coluna esquerda */
+.news-container {
+    display: block;
+    gap: 20px;
+    padding: 2px;
+}
+
+.news-item {
+    flex: 1;
+     /* Para que as notícias ocupem metade da largura da coluna esquerda */
+    
+}
+
+.news-item img{
+   align-items: center;
+}
+
+.h1noticiasantigas{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-noticias{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item-noticias{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.608);
+    border-radius: 10px;   
+    /* max-width: calc(70% - 10px); */
+}
+
+@media (max-width: 768px) {
+
+    .container-noticias{
+        width: 200px;
+    }
+    
+}
+
+.linknoticias{
+    text-decoration: none;
+    color: #080f0f;
+}
+
+.imgnoticias{
+    padding: 10px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+     
+}
+
+
+  
+
+   .leiamais{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: blue; /* Ou a cor desejada para o link */
+    font-weight: bold;
+   }
+
+
+
+
+
+
+   
+
+
+/*.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  
+  .column {
+    width: 30%; /* Ajuste a largura das colunas conforme necessário 
+
+  }
+
+  .imgantigas{
+   width: 200px;
+   height: 200px;
+   background-color: #080f0f;
+  }
+
+  .noticiasantigas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px; 
+  }
+
+  .containernoticiasantigas {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 60px;
+  }
+
+  .containernoticiasantigas h1 {
+    color: var(--cor2);
+    display:grid;
+
+  } 
+  .imgnoticias{
+   padding: 10px;
+   text-align: center;
+   display: block;
+   margin: 0 auto;
+    
+  }
+
+  
+
+ 
+
+  
+
+ 
+  
+  /* Estilos para a tela média */
+  @media screen and (max-width: 810px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .column {
+      width: 100%;
+      margin-bottom: 10px; /* Espaçamento entre as colunas */
+      transition: transform 0.3s;
+      
+    }
+  
+    .featured {
+      order: -1; /* Coloca a coluna em destaque antes das demais na ordem */
+      background-color: #f7f7f7; /* Adicione a cor de destaque aqui */
+    }
+
+    
+    
+  } 
 
 
 
