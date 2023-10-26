@@ -31,7 +31,7 @@
 }
 
 body{
-    background-color: rgba(128, 128, 128, 0.325);
+    background-color: #fe9400
 }
 
 #containerheader{
@@ -356,6 +356,11 @@ body{
     .grafico-medio{
         display: none;
     }
+  
+ }
+
+ @media screen and ( max-width: 730px) {
+   
   
  }
 
