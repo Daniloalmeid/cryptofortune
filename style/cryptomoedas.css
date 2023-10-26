@@ -314,14 +314,15 @@ body{
   display: none;
 }
 
-@media screen and ( min-width: 730px) {
+@media screen and ( max-width: 730px) {
     .grafico-grande{
         display: none;
-       
     }
-    
   
  }
+
+
+
 
 
 
