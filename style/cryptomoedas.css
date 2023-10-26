@@ -322,10 +322,29 @@ body{
     .grafico-pequeno{
         display: block;
     }
+
+    .grafico-medio{
+        display: none;
+    }
   
  }
 
  @media screen and ( min-width: 740px) {
+    .grafico-grande{
+        display: none;
+    }
+
+    .grafico-pequeno{
+        display: none;
+    }
+
+    .grafico-medio{
+        display: block;
+    }
+  
+ }
+
+ @media screen and ( min-width: 850px) {
     .grafico-grande{
         display: block;
     }
@@ -333,8 +352,14 @@ body{
     .grafico-pequeno{
         display: none;
     }
+
+    .grafico-medio{
+        display: none;
+    }
   
  }
+
+ 
 
 
 
