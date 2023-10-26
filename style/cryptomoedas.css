@@ -318,8 +318,25 @@ body{
     .grafico-grande{
         display: none;
     }
+
+    .grafico-pequeno{
+        display: block;
+    }
   
  }
+
+ @media screen and ( min-width: 740px) {
+    .grafico-grande{
+        display: block;
+    }
+
+    .grafico-pequeno{
+        display: none;
+    }
+  
+ }
+
+
 
 
 
