@@ -390,9 +390,15 @@ body{
  @media screen and ( max-width: 730px) {
     .doe{
       
-        left: px;
-        top: px;
+        left: 20px;
+        top: 338px;
         padding: 10px;
+     }
+
+     .doe h3{
+        font-size: 1rem;
+        padding: 10px;
+        margin: 10px;
      }
   
  }
