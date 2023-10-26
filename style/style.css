@@ -109,19 +109,23 @@ body{
     flex-wrap: wrap;
     
 } */
+
 .menu li.nav-item:hover .submenu li {
    display: block; 
+  
     
 }
 .menu li.nav-item:hover .imgcripto{
     display: block;
     margin-top: 30px; 
+    
  }
 
- .menu li:hover .submenu2 li {
+ .menu:hover .submenu2 li {
     display: none; 
      
  }
+ 
 
 
  /* .menu li:hover #sumir {

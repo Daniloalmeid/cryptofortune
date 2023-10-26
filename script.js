@@ -61,7 +61,7 @@ window.addEventListener("load", function() {
         {
           breakpoint: 730, // Ponto de corte para tela pequena
           settings: {
-            slidesToShow: 3 // Número de slides para tela pequena
+            slidesToShow: 2 // Número de slides para tela pequena
           }
         }
       ]
