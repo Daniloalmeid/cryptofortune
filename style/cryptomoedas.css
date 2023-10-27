@@ -366,42 +366,33 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    display: grid;
  }
  .imgdoe{
-    width: 60px;
+    width: 50px;
     padding: 10px;
  }
  .doe{
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 1200px;
-    top: 267px;
-    padding: 10px;
+    margin-top: -50px;
+
+    
+    
  }
 
  .doe h3{
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-shadow: 3px 3px 10px black;
-    
+    font-size: 0.9rem;
  }
- @media screen and ( max-width: 730px) {
-    .doe{
-      
-        left: 20px;
-        top: 338px;
-        padding: 10px;
-     }
-
-     .doe h3{
-        font-size: 1rem;
-        padding: 10px;
-        margin: 10px;
-     }
-  
+ .adoe{
+    text-decoration: none;
+    cursor: pointer;
  }
+ 
 
 
  
